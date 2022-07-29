@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      text-align: center;
+      color: rgb(0, 98, 255);
+    }
+    body {
+      background-image: url("https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-14.jpg");
+    }
+    img {
+      max-width: 40vw;
+      max-height: 40vh;
+    }
+  </style>
+  <body>
+    <h1>Random star wars character generator</h1>
+    <button class="generate">click to generate</button>
+    <div class="img"></div>
+    <div
+      class="details"
+      style="text-align: left; padding-left: 40vw; color: rgb(187, 255, 51)"
+    ></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".generate").on("click", () => {
+          let x = Math.floor(Math.random() * 89) + 1;
+          let url = $.get(
+            `https://akabab.github.io/starwars-api/api/id/${x}.json`,
+            function (data) {
+              var image = data["image"];
+              $(".img").html(`<img src='${image}' alt='image'>`);
+              $(".details").html(
+                `       "name"=${data["name"]}<br>
+                        "height"=${data["height"]}<br>
+                        "mass"=${data["mass"]}<br>
+                        "gender"=${data["gender"]}<br>
+                        "homeworld"=${data["homeworld"]}<br>
+                        "born"=${data["born"]}<br>
+                        "bornLocation"=${data["bornLocation"]}<br>
+                        "died"=${data["died"]},<br>
+                        "diedLocation"=${data["diedLocation"]}<br>
+                        "species"=${data["species"]}<br>
+                        "hairColor"=${data["hairColor"]}<br>
+                        "eyeColor"=${data["eyeColor"]}<br>
+                        "skinColor"=${data["skinColor"]}<br>
+                        "cybernetics"=${data["cybernetics"]}<br><a href="${data["wiki"]}" target='_blank' class="link">Click Here for more details</a>`
+              );
+            }
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

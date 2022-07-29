@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Oxygen:wght@300&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/c4bc402a21.js" crossorigin="anonymous"></script>
+  <title>Cake Bakery</title>
+</head>
+
+<body>
+  <nav>
+    <img id="logo" src="images/logo.png" alt="logo" />
+    <a href="">Main</a>
+    <a href="#catalog">Catalog</a>
+    <a href="#aboutus">About us</a>
+    <a href="#specialoffer">Special Offer</a>
+    <a href="#specialoffer">Reviews</a>
+    <a href="#contact">Contacts</a>
+    <div class="num">
+      <i class="fa-solid fa-phone"></i>
+      +1 567 632 65 78
+      <i class="fa-solid fa-copy"></i>
+    </div>
+  </nav>
+  <div class="home" style="background-image:url('images/bg1.jpg') ;">
+    <div class="content">
+      <h1>
+        Delicious cakes<br />
+        to order
+      </h1>
+      <button class="btn" onclick="window.location='#catalog'">Choose a cake</button>
+    </div>
+  </div>
+  <div class="catalog" id="catalog">
+    <div class="content">
+      <h2>Our Catalog</h2>
+      <ul>
+        <li><a href="">Cakes</a></li>
+        <li>Cupcakes</li>
+        <li>Cookies</li>
+      </ul>
+    </div>
+    <div class="description">
+      <h3>Filling</h3>
+      <p>You can choose from one of the six toppings for the cake</p>
+      <ul>
+        <li>Sniker</li>
+        <li>Red Velvet</li>
+        <li>Oreo Cheese</li>
+        <li>Cherry bomb</li>
+        <li>Berry</li>
+        <li>Bounty</li>
+        <button class="btn" onclick="openForm()">To Order</button>
+      </ul>
+    </div>
+    <div class="box">
+      <img class="gallery__img" src="images/cake1.jpg" alt="" />
+    </div>
+    <div class="box">
+      <img class="gallery__img" src="images/cake2.jpg" alt="" />
+    </div>
+    <div class="box">
+      <img class="gallery__img" src="images/cake3.jpg" alt="" />
+    </div>
+    <div class="box">
+      <img class="gallery__img" src="images/cake4.jpg" alt="" />
+    </div>
+    <div class="box">
+      <img class="gallery__img" src="images/cake5.jpg" alt="" />
+    </div>
+    <div class="box">
+      <img class="gallery__img" src="images/cake6.jpg" alt="" />
+    </div>
+  </div>
+  <div class="aboutus" id="aboutus">
+    <div class="content">
+      <h3 style="color: #f5bd1f">About us</h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
+        quaerat illo illum! Laborum dolor, voluptates consectetur aliquid
+        temporibus voluptate ab, facilis cum fuga rerum quaerat repudiandae!
+        Blanditiis optio ut architecto? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Sed quidem illum iure maiores quos numquam sequi
+        aliquam labore architecto esse. Harum dignissimos laboriosam hic.
+        Repudiandae, nulla! Explicabo numquam vitae maxime. Lorem ipsum dolor,
+        sit amet consectetur adipisicing elit. Ullam consequatur tenetur dicta
+        esse cupiditate sunt rem odit, eius doloremque et. Rem assumenda nemo
+        asperiores nisi incidunt aliquid ullam animi quis.
+      </p>
+    </div>
+    <div class="offer" id="specialoffer">
+      <h3>Special Offer</h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis
+        fugit a necessitatibus autem adipisci mollitia dignissimos ratione
+        unde eum doloremque esse soluta quia blanditiis facilis distinctio,
+        fugiat repellat quisquam iusto?
+      </p>
+      <br />
+      <button class="btn" onclick="openForm()">To Order</button>
+    </div>
+    <div class="pic">
+      <img class="gallery__img" src="images/cupcake.jpg" alt="" />
+    </div>
+  </div>
+  <div class="comments">
+    <div class="content">
+      <i class="fa-solid fa-comment"></i>
+      <p>
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+        quidem aliquam possimus dolor saepe culpa cupiditate eligendi sequi a,
+        sint reprehenderit doloribus aspernatur debitis, assumenda tenetur
+        tempora magnam delectus illum. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Molestias sequi, impedit optio voluptatem delectus
+        unde totam. Sapiente porro voluptate, incidunt praesentium ipsum
+        ratione ea aliquam natus corporis reprehenderit, molestias a. Lorem
+        ipsum dolor, sit amet consectetur adipisicing elit. Fugiat,
+        voluptatibus! Magni at nesciunt quae facere voluptas vel officia
+        dignissimos omnis enim ratione cum, sit nam. Magnam saepe molestiae
+        hic facilis?
+      </p>
+      <h3>Sri Kumar</h3>
+    </div>
+  </div>
+  <div class="contact" id="contact" style="background-image:url('images/bg2.jpg') ;">
+    <div class="content">
+      <h3 style="text-align:center ;">Our Contacts</h3>
+      <ul style="list-style:none;">
+        <li>Phone:+1 567 632 65 78 </li>
+        <li>E-mail: bakery@cakes.in</li>
+        <li>Address:Cecilia Chapman 711-2880 Nulla St.Mankato Mississippi 96522 (257) 563-7401</li>
+      </ul>
+    </div>
+
+  </div>
+  </div>
+  <div class="application" id="application">
+    <h3>Application</h3>
+    <form id="form2" method="post" onsubmit="javascript:alert('Submitted Successfully!')"
+      action="javascript:application()">
+      <input name="name" type="text" placeholder="Your name">
+      <input name="surname" type="text" placeholder="Your surname">
+      <input name="phone" type="number" placeholder="Phone">
+      <input name="email" type="email" placeholder="E-mail"><br><br>
+      <input type="submit" value="Send">
+    </form>
+  </div>
+  <nav>
+    <img id="logo" src="images/logo.png" alt="logo" />
+    <a href="">Main</a>
+    <a href="#catalog">Catalog</a>
+    <a href="#aboutus">About us</a>
+    <a href="#specialoffer">Special Offer</a>
+    <a href="#aboutus">Reviews</a>
+    <a href="#contact">Contacts</a>
+    <div class="num">
+      <i class="fa-solid fa-phone"></i>
+      +1 567 632 65 78
+      <i class="fa-solid fa-copy"></i>
+    </div>
+  </nav>
+
+  <div class="form-popup" id="myForm">
+    <form class="form-container" id="form1" action="javascript:orderSubmit()" onsubmit="javascript:alert('Submtted!')">
+      <h1>Order</h1>
+      <input type="text" placeholder="Name" name="email" required>
+      <input type="text" placeholder="Email" name="email" required>
+      <div class="selector">
+        <label for="type">Choose Type:</label>
+        <select name="type" id="type" required>
+          <option value="" selected="selected">---Select---</option>
+        </select>
+      </div>
+      <div class="selector">
+        <label for="type">Choose Flavor:</label>
+        <select name="flavor" id="flavor" required>
+          <option value="" selected="selected">---Select---</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn">Place Order</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
